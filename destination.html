@@ -9,34 +9,69 @@
 </head>
 <body>
 
-<header class="bg-white sticky-top shadow-sm">
-  <div class="container">
-    <nav class="navbar navbar-expand-lg navbar-light p-0">
-      <div class="container-fluid px-0">
-        <a class="navbar-brand" href="#">
-          <img src="https://www.japan.travel/assets/images/logo/logo.svg" alt="Japan Travel Logo" class="img-fluid">
-        </a>
-        <button class="navbar-toggler ms-auto border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav mx-auto">
-            <li class="nav-item"><a class="nav-link rounded-pill px-3 py-2 m-1 btn btn-outline-danger border-0 text-dark" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link rounded-pill px-3 py-2 m-1 btn btn-outline-danger border-0 text-dark" href="#">Destinations</a></li>
-            <li class="nav-item"><a class="nav-link rounded-pill px-3 py-2 m-1 btn btn-outline-danger border-0 text-dark" href="#">Plan your Trips</a></li>
-            <li class="nav-item"><a class="nav-link rounded-pill px-3 py-2 m-1 btn btn-outline-danger border-0 text-dark" href="#">Citations</a></li>
-          </ul>
+    <header class="bg-white sticky-top shadow-sm">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light p-0">
+                <div class="container-fluid px-0">
+                    <a class="navbar-brand d-flex align-items-center" href="#">
+                        <img src="Images/logo1.jpeg" alt="Japan Travel Logo" class="img-fluid me-2">
+                        <span class="fw-bold fs-5">Kino's Travel Guide</span>
+                    </a>
+                    
+                    <button class="navbar-toggler ms-auto border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+        
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item">
+                                <a class="nav-link rounded-pill px-3 py-2 m-1 btn btn-outline-danger border-0 text-dark" href="index.html">
+                                    Home
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link rounded-pill px-3 py-2 m-1 btn btn-outline-danger border-0 text-dark" href="destination.html">
+                                    Destinations
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link rounded-pill px-3 py-2 m-1 btn btn-outline-danger border-0 text-dark" href="#">
+                                    Plan your Trips
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link rounded-pill px-3 py-2 m-1 btn btn-outline-danger border-0 text-dark" href="#">
+                                    Citations
+                                </a>
+                            </li>
+                        </ul>
+                        
           <form class="d-flex ms-lg-3 my-2 my-lg-0">
-            <div class="input-group">
-              <input class="form-control border-end-0" type="search" placeholder="Search...">
+            <div class="input-group position-relative">
+              <input class="form-control border-end-0" id="search-input" type="search" placeholder="Search destinations..." oninput="filterDestinations()">
               <button class="btn btn-outline-secondary border-start-0" type="submit"><i class="bi bi-search"></i></button>
             </div>
+            <div id="recommendation-bar" class="list-group position-absolute w-100 mt-1" style="display: none;">
+            </div>
           </form>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+<div class="container-fluid px-0">
+    <div style="height: 80vh">
+      <div class="position-relative h-100">
+        <img src="Images/destinationsplash.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Japan Destinations Hero Image">
+        <div class="position-absolute top-0 start-0 w-100 h-100 bg-black opacity-50"></div>
+        <div class="carousel-caption d-flex flex-column justify-content-center h-100 pb-3 pb-md-5 text-center">
+          <h1 class="text-white fw-bold display-5 display-md-3 display-lg-1">Discover Japan’s Most Breathtaking Destinations</h1>
+          <p class="fs-5 fs-lg-4">Explore iconic landmarks, hidden gems, and unforgettable adventures across Japan’s vibrant cities and serene countryside.</p>
         </div>
       </div>
-    </nav>
+    </div>
   </div>
-</header>
 
 <div class="container-fluid py-5">
   <div class="row">
@@ -55,7 +90,7 @@
 
         <div class="carousel-inner h-100">
             <div class="carousel-item active h-100 position-relative" data-map-url="https://maps.google.com/maps?q=35.3606,138.7274&z=14&output=embed">
-              <a href="#">
+              <a href="mountfuji.html">
                 <img src="Images/Mount Fuji.png" class="d-block w-100 h-100 object-fit-cover" alt="Mount Fuji">
                 <div class="position-absolute top-0 start-0 w-100 h-100 bg-black opacity-50"></div>
                 <div class="carousel-caption d-flex flex-column justify-content-end h-100 pb-3 pb-md-5">
@@ -66,7 +101,7 @@
             </div>
           
             <div class="carousel-item h-100 position-relative" data-map-url="https://maps.google.com/maps?q=34.6873,135.5259&z=14&output=embed">
-              <a href="index.html">
+              <a href="osakacastle.html">
                 <img src="Images/Osaka Castle.png" class="d-block w-100 h-100 object-fit-cover" alt="Osaka Castle">
                 <div class="position-absolute top-0 start-0 w-100 h-100 bg-black opacity-50"></div>
                 <div class="carousel-caption d-flex flex-column justify-content-end h-100 pb-3 pb-md-5">
@@ -77,7 +112,7 @@
             </div>
           
             <div class="carousel-item h-100 position-relative" data-map-url="https://maps.google.com/maps?q=35.6852,139.7100&z=14&output=embed">
-              <a href="#">
+              <a href="shinjukugyoen.html">
                 <img src="Images/Shinjuku Gyoen National Garden.png" class="d-block w-100 h-100 object-fit-cover" alt="Shinjuku Gyoen">
                 <div class="position-absolute top-0 start-0 w-100 h-100 bg-black opacity-50"></div>
                 <div class="carousel-caption d-flex flex-column justify-content-end h-100 pb-3 pb-md-5">
@@ -88,7 +123,7 @@
             </div>
           
             <div class="carousel-item h-100 position-relative" data-map-url="https://maps.google.com/maps?q=36.2381,137.9706&z=14&output=embed">
-              <a href="#">
+              <a href="matsumoto.html">
                 <img src="Images/Matsumoto Castle.png" class="d-block w-100 h-100 object-fit-cover" alt="Matsumoto Castle">
                 <div class="position-absolute top-0 start-0 w-100 h-100 bg-black opacity-50"></div>
                 <div class="carousel-caption d-flex flex-column justify-content-end h-100 pb-3 pb-md-5">
@@ -99,7 +134,7 @@
             </div>
           
             <div class="carousel-item h-100 position-relative" data-map-url="https://maps.google.com/maps?q=35.0155,135.6726&z=14&output=embed">
-              <a href="#">
+              <a href="arashiyama.html">
                 <img src="Images/Arashiyama Monkey Park.png" class="d-block w-100 h-100 object-fit-cover" alt="Monkey Park">
                 <div class="position-absolute top-0 start-0 w-100 h-100 bg-black opacity-50"></div>
                 <div class="carousel-caption d-flex flex-column justify-content-end h-100 pb-3 pb-md-5">
@@ -110,7 +145,7 @@
             </div>
           
             <div class="carousel-item h-100 position-relative" data-map-url="https://maps.google.com/maps?q=34.6655,135.5064&z=14&output=embed">
-              <a href="#">
+              <a href="kuromon.html">
                 <img src="Images/Kuromon Ichiba Market.png" class="d-block w-100 h-100 object-fit-cover" alt="Kuromon Market">
                 <div class="position-absolute top-0 start-0 w-100 h-100 bg-black opacity-50"></div>
                 <div class="carousel-caption d-flex flex-column justify-content-end h-100 pb-3 pb-md-5">
@@ -121,7 +156,7 @@
             </div>
           
             <div class="carousel-item h-100 position-relative" data-map-url="https://maps.google.com/maps?q=35.6852,139.7528&z=14&output=embed">
-              <a href="#">
+              <a href="imperial.html">
                 <img src="Images/Tokyo Imperial Palace.png" class="d-block w-100 h-100 object-fit-cover" alt="Imperial Palace">
                 <div class="position-absolute top-0 start-0 w-100 h-100 bg-black opacity-50"></div>
                 <div class="carousel-caption d-flex flex-column justify-content-end h-100 pb-3 pb-md-5">
@@ -132,7 +167,7 @@
             </div>
           
             <div class="carousel-item h-100 position-relative" data-map-url="https://maps.google.com/maps?q=35.0094,135.6672&z=14&output=embed">
-              <a href="#">
+              <a href="bamboogrove.html">
                 <img src="Images/Arashiyama Bamboo Grove.png" class="d-block w-100 h-100 object-fit-cover" alt="Arashiyama Bamboo Grove">
                 <div class="position-absolute top-0 start-0 w-100 h-100 bg-black opacity-50"></div>
                 <div class="carousel-caption d-flex flex-column justify-content-end h-100 pb-3 pb-md-5">
@@ -190,5 +225,43 @@
   });
 </script>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    const destinations = [
+      { name: "Arashiyama Monkey Park", link: "arashiyama.html" },
+      { name: "Mount Fuji", link: "mountfuji.html" },
+      { name: "Osaka Castle", link: "osakacastle.html" },
+      { name: "Shinjuku Gyoen National Garden", link: "shinjukugyoen.html" },
+      { name: "Matsumoto Castle", link: "matsumoto.html" },
+      { name: "Arashiyama Bamboo Grove", link: "bamboogrove.html" },
+      { name: "Kuromon Ichiba Market", link: "kuromon.html" },
+      { name: "Tokyo Imperial Palace", link: "imperial.html" }
+    ];
+  
+    function filterDestinations() {
+      const searchInput = document.getElementById("search-input").value.toLowerCase();
+      const recommendations = destinations.filter(destination =>
+        destination.name.toLowerCase().includes(searchInput)
+      );
+  
+      const recommendationBar = document.getElementById("recommendation-bar");
+      recommendationBar.innerHTML = "";
+  
+      if (recommendations.length > 0 && searchInput !== "") {
+        recommendations.forEach(destination => {
+          const item = document.createElement("a");
+          item.classList.add("list-group-item", "list-group-item-action");
+          item.href = destination.link;
+          item.textContent = destination.name;
+          recommendationBar.appendChild(item);
+        });
+  
+        recommendationBar.style.display = "block";
+      } else {
+        recommendationBar.style.display = "none";
+      }
+    }
+  </script>
 </body>
 </html>

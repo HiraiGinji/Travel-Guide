@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Osaka Castle - Japan Destinations</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body>
+
+    <header class="bg-white sticky-top shadow-sm">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light p-0">
+                <div class="container-fluid px-0">
+                    <a class="navbar-brand d-flex align-items-center" href="#">
+                        <img src="Images/logo1.jpeg" alt="Japan Travel Logo" class="img-fluid me-2">
+                        <span class="fw-bold fs-5">Kino's Travel Guide</span>
+                    </a>
+                    
+                    <button class="navbar-toggler ms-auto border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+        
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item">
+                                <a class="nav-link rounded-pill px-3 py-2 m-1 btn btn-outline-danger border-0 text-dark" href="index.html">
+                                    Home
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link rounded-pill px-3 py-2 m-1 btn btn-outline-danger border-0 text-dark" href="destination.html">
+                                    Destinations
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link rounded-pill px-3 py-2 m-1 btn btn-outline-danger border-0 text-dark" href="#">
+                                    Plan your Trips
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link rounded-pill px-3 py-2 m-1 btn btn-outline-danger border-0 text-dark" href="#">
+                                    Citations
+                                </a>
+                            </li>
+                        </ul>
+                        
+          <form class="d-flex ms-lg-3 my-2 my-lg-0">
+            <div class="input-group position-relative">
+              <input class="form-control border-end-0" id="search-input" type="search" placeholder="Search destinations..." oninput="filterDestinations()">
+              <button class="btn btn-outline-secondary border-start-0" type="submit"><i class="bi bi-search"></i></button>
+            </div>
+            <div id="recommendation-bar" class="list-group position-absolute w-100 mt-1" style="display: none;">
+            </div>
+          </form>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+<div class="container-fluid px-0">
+  <div style="height: 80vh">
+    <div class="position-relative h-100">
+      <img src="Images/osakacastlesplash.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Osaka Castle">
+      <div class="position-absolute top-0 start-0 w-100 h-100 bg-black opacity-50"></div>
+      <div class="carousel-caption d-flex flex-column justify-content-center h-100 pb-3 pb-md-5 text-center">
+        <h1 class="text-white fw-bold display-5 display-md-3 display-lg-1">Osaka Castle</h1>
+        <p class="fs-5 fs-lg-4">A historic symbol of resilience and architectural splendor in the heart of Osaka.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="container my-5">
+  <div class="row align-items-center">
+    <div class="col-lg-6 mb-4 mb-lg-0">
+      <img src="Images/osakacastle1.jpg" class="img-fluid rounded-4 shadow" alt="Osaka Castle Front View">
+    </div>
+    <div class="col-lg-6">
+      <h2 class="fw-bold mb-3">Explore Osaka Castle</h2>
+      <p class="lead">
+        Originally built in the late 16th century by Toyotomi Hideyoshi, Osaka Castle played a major role in unifying Japan. The current structure is a magnificent reconstruction that sits in the middle of a beautiful park, surrounded by moats and cherry trees.
+      </p>
+      <ul class="list-unstyled">
+        <li><i class="bi bi-check-circle-fill text-danger me-2"></i> One of Japan’s most famous landmarks</li>
+        <li><i class="bi bi-check-circle-fill text-danger me-2"></i> Houses a museum detailing the history of the castle</li>
+        <li><i class="bi bi-check-circle-fill text-danger me-2"></i> Beautiful cherry blossom spot in spring</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row mt-5 align-items-center">
+    <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0">
+      <img src="Images/osakacastle2.jpg" class="img-fluid rounded-4 shadow" alt="Osaka Castle Park">
+    </div>
+    <div class="col-lg-6 order-lg-1">
+      <h3 class="fw-bold mb-3">Best Time to Visit</h3>
+      <p class="lead">
+        Spring is the perfect time to visit Osaka Castle Park, when cherry blossoms bloom beautifully around the castle grounds. Autumn also offers a magical experience with golden leaves and a peaceful atmosphere.
+      </p>
+    </div>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    const destinations = [
+      { name: "Arashiyama Monkey Park", link: "arashiyama.html" },
+      { name: "Mount Fuji", link: "mountfuji.html" },
+      { name: "Osaka Castle", link: "osakacastle.html" },
+      { name: "Shinjuku Gyoen National Garden", link: "shinjukugyoen.html" },
+      { name: "Matsumoto Castle", link: "matsumoto.html" },
+      { name: "Arashiyama Bamboo Grove", link: "bamboogrove.html" },
+      { name: "Kuromon Ichiba Market", link: "kuromon.html" },
+      { name: "Tokyo Imperial Palace", link: "imperial.html" }
+    ];
+  
+    function filterDestinations() {
+      const searchInput = document.getElementById("search-input").value.toLowerCase();
+      const recommendations = destinations.filter(destination =>
+        destination.name.toLowerCase().includes(searchInput)
+      );
+  
+      const recommendationBar = document.getElementById("recommendation-bar");
+      recommendationBar.innerHTML = "";
+  
+      if (recommendations.length > 0 && searchInput !== "") {
+        recommendations.forEach(destination => {
+          const item = document.createElement("a");
+          item.classList.add("list-group-item", "list-group-item-action");
+          item.href = destination.link;
+          item.textContent = destination.name;
+          recommendationBar.appendChild(item);
+        });
+  
+        recommendationBar.style.display = "block";
+      } else {
+        recommendationBar.style.display = "none";
+      }
+    }
+  </script>
+
+</body>
+</html>
