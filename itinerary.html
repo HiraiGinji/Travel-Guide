@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Japan Travel Seasons</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+</head>
+<body>
+  <header class="bg-white sticky-top shadow-sm">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light p-0">
+            <div class="container-fluid px-0">
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img src="Images/logo1.jpeg" alt="Japan Travel Logo" class="img-fluid me-2">
+                    <span class="fw-bold fs-5">Kino's Travel Guide</span>
+                </a>
+                
+                <button class="navbar-toggler ms-auto border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link rounded-pill px-3 py-2 m-1 btn btn-outline-danger border-0 text-dark" href="index.html">
+                                Home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link rounded-pill px-3 py-2 m-1 btn btn-outline-danger border-0 text-dark" href="destination.html">
+                                Destinations
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle rounded-pill px-3 py-2 m-1 btn btn-outline-danger border-0 text-dark"
+                             href="#" id="navbarDropdownPlan" role="button" data-bs-toggle="dropdown"
+                             aria-expanded="false">
+                              Plan your Trips
+                          </a>
+                          <ul class="dropdown-menu" aria-labelledby="navbarDropdownPlan">
+                              <li><a class="dropdown-item" href="travelchecklist.html">Travel Checklist</a></li>
+                              <li><a class="dropdown-item" href="itinerary.html">Itinerary</a></li>
+                              <li><a class="dropdown-item" href="package.html">Package and Trip planning</a></li>
+                          </ul>
+                      </li>
+                        <li class="nav-item">
+                            <a class="nav-link rounded-pill px-3 py-2 m-1 btn btn-outline-danger border-0 text-dark" href="#">
+                                Citations
+                            </a>
+                        </li>
+                    </ul>
+                    
+      <form class="d-flex ms-lg-3 my-2 my-lg-0">
+        <div class="input-group position-relative">
+          <input class="form-control border-end-0" id="search-input" type="search" placeholder="Search destinations..." oninput="filterDestinations()">
+          <button class="btn btn-outline-secondary border-start-0" type="submit"><i class="bi bi-search"></i></button>
+        </div>
+        <div id="recommendation-bar" class="list-group position-absolute w-100 mt-1" style="display: none;">
+        </div>
+      </form>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+
+  <div class="container mt-3">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">Japan</li>
+        <li class="breadcrumb-item active" aria-current="page">Seasonal Highlights</li>
+      </ol>
+    </nav>
+  </div>
+
+  <div class="container my-5" id="seasonal">
+    <h2 class="text-center mb-4">Top Seasonal Destinations</h2>
+    <ul class="nav nav-pills justify-content-center mb-3" id="pills-tab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="spring-tab" data-bs-toggle="pill" data-bs-target="#spring" type="button" role="tab">Spring</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="summer-tab" data-bs-toggle="pill" data-bs-target="#summer" type="button" role="tab">Summer</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="autumn-tab" data-bs-toggle="pill" data-bs-target="#autumn" type="button" role="tab">Autumn</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="winter-tab" data-bs-toggle="pill" data-bs-target="#winter" type="button" role="tab">Winter</button>
+      </li>
+    </ul>
+    <div class="tab-content" id="pills-tabContent">
+      <div class="tab-pane fade show active" id="spring" role="tabpanel">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="card h-100">
+              <img src="Images/spring1.png" class="card-img-top" alt="Shinjuku Gyoen">
+              <div class="card-body">
+                <h5 class="card-title">Shinjuku Gyoen National Garden</h5>
+                <p class="card-text">Shinjuku Gyoen is perfect for viewing sakura (cherry blossoms) in full bloom during the spring season.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="Images/spring2.png" class="card-img-top" alt="Tokyo Imperial Palace">
+              <div class="card-body">
+                <h5 class="card-title">Tokyo Imperial Palace</h5>
+                <p class="card-text">The Imperial Palace offers a breathtaking view of cherry blossoms in spring, providing a serene atmosphere.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="Images/Arashiyama Bamboo Grove.png" class="card-img-top" alt="Arashiyama Bamboo Grove">
+              <div class="card-body">
+                <h5 class="card-title">Arashiyama Bamboo Grove</h5>
+                <p class="card-text">Arashiyama is a peaceful bamboo forest, ideal for spring visits when the weather is mild and the greenery flourishes.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="summer" role="tabpanel">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="card h-100">
+              <img src="images/summer1.png" class="card-img-top" alt="Mount Fuji">
+              <div class="card-body">
+                <h5 class="card-title">Mount Fuji</h5>
+                <p class="card-text">Summer is the best time to hike Mount Fuji, offering clear views and pleasant weather for climbing.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="Images/summer2.png" class="card-img-top" alt="Arashiyama Monkey Park">
+              <div class="card-body">
+                <h5 class="card-title">Arashiyama Monkey Park</h5>
+                <p class="card-text">During the summer, the Arashiyama Monkey Park provides visitors with a chance to observe macaques in their natural habitat.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="Images/Kuromon Ichiba Market.png" class="card-img-top" alt="Kuromon Ichiba Market">
+              <div class="card-body">
+                <h5 class="card-title">Kuromon Ichiba Market</h5>
+                <p class="card-text">Explore Osaka’s famous market in summer for fresh seafood, traditional street foods, and a lively atmosphere.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="autumn" role="tabpanel">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="card h-100">
+              <img src="Images/autumn1.png " class="card-img-top" alt="Matsumoto Castle">
+              <div class="card-body">
+                <h5 class="card-title">Matsumoto Castle</h5>
+                <p class="card-text">Autumn offers vibrant foliage around Matsumoto Castle, providing a beautiful contrast to its traditional black walls.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="Images/Arashiyama Bamboo Grove.png" class="card-img-top" alt="Arashiyama Bamboo Grove">
+              <div class="card-body">
+                <h5 class="card-title">Arashiyama Bamboo Grove</h5>
+                <p class="card-text">Autumn in Arashiyama brings colorful leaves, enhancing the beauty of the bamboo forest.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="Images/autumn3.png" class="card-img-top" alt="Tokyo Imperial Palace">
+              <div class="card-body">
+                <h5 class="card-title">Tokyo Imperial Palace</h5>
+                <p class="card-text">The Tokyo Imperial Palace is surrounded by stunning autumn foliage, creating a picturesque backdrop for visits during the fall season.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="winter" role="tabpanel">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="card h-100">
+              <img src="Images/winter1.png" class="card-img-top" alt="Osaka Castle">
+              <div class="card-body">
+                <h5 class="card-title">Osaka Castle</h5>
+                <p class="card-text">Winter snow transforms Osaka Castle into a winter wonderland, making it the ideal destination for a peaceful winter visit.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="Images/winter2.png" class="card-img-top" alt="Matsumoto Castle">
+              <div class="card-body">
+                <h5 class="card-title">Matsumoto Castle</h5>
+                <p class="card-text">Matsumoto Castle's dark exterior contrasts beautifully with the surrounding snow in winter, creating an enchanting scene.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="images/winter4.png" class="card-img-top" alt="Mount Fuji">
+              <div class="card-body">
+                <h5 class="card-title">Mount Fuji</h5>
+                <p class="card-text">Mount Fuji is a must-see during winter, offering snow-capped views that are perfect for photography enthusiasts.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Annual Timeline -->
+  <div class="container my-5" id="timeline">
+    <h2 class="text-center mb-4">Annual Travel Timeline</h2>
+    <div class="row g-4">
+      <div class="col-12">
+        <ul class="list-group">
+          <li class="list-group-item"><strong> January:</strong> Kuromon Ichiba Market - Winter is the best time to experience the warmth of local foods in Osaka.</li>
+          <li class="list-group-item"><strong> February:</strong> Arashiyama Monkey Park - The winter chill makes it a great time to visit the monkeys in the park.</li>
+          <li class="list-group-item"><strong> March:</strong> Shinjuku Gyoen National Garden - Perfect for cherry blossom viewing.</li>
+          <li class="list-group-item"><strong> May:</strong>  Arashiyama Bamboo Grove - Spring is ideal for bamboo forest visits.</li>
+          <li class="list-group-item"><strong> July:</strong> Mount Fuji - Summer offers the best weather for hiking Fuji.</li>
+          <li class="list-group-item"><strong> September:</strong>  Matsumoto Castle - Autumn foliage at its best.</li>
+          <li class="list-group-item"><strong> November:</strong> Tokyo Imperial Palace - Great for autumn walks.</li>
+          <li class="list-group-item"><strong> December:</strong> Osaka Castle - A snowy December is perfect for castle visits.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Image Gallery -->
+  <div class="container my-5" id="gallery">
+    <h2 class="text-center mb-4">Seasonal Travel Gallery</h2>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+      <div class="col">
+        <div class="card h-100">
+          <img src="Images/spring2.png" class="card-img-top" alt="Cherry Blossoms">
+          <div class="card-body">
+            <p class="card-text">Springtime sakura in full bloom.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="Images/summer1.png" class="card-img-top" alt="Mount Fuji">
+          <div class="card-body">
+            <p class="card-text">The iconic Mount Fuji during summer hikes.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="images/Arashiyama Bamboo Grove.png" class="card-img-top" alt="Bamboo Grove">
+          <div class="card-body">
+            <p class="card-text">Lush bamboo forests of Arashiyama.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="Images/autumn1.png" class="card-img-top" alt="Matsumoto Castle">
+          <div class="card-body">
+            <p class="card-text">Autumn views of Matsumoto Castle surrounded by colored leaves.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const destinations = [
+      { name: "Arashiyama Monkey Park", link: "arashiyama.html" },
+      { name: "Mount Fuji", link: "mountfuji.html" },
+      { name: "Osaka Castle", link: "osakacastle.html" },
+      { name: "Shinjuku Gyoen National Garden", link: "shinjukugyoen.html" },
+      { name: "Matsumoto Castle", link: "matsumoto.html" },
+      { name: "Arashiyama Bamboo Grove", link: "bamboogrove.html" },
+      { name: "Kuromon Ichiba Market", link: "kuromon.html" },
+      { name: "Tokyo Imperial Palace", link: "imperial.html" }
+    ];
+  
+    function filterDestinations() {
+      const searchInput = document.getElementById("search-input").value.toLowerCase();
+      const recommendations = destinations.filter(destination =>
+        destination.name.toLowerCase().includes(searchInput)
+      );
+  
+      const recommendationBar = document.getElementById("recommendation-bar");
+      recommendationBar.innerHTML = "";
+  
+      if (recommendations.length > 0 && searchInput !== "") {
+        recommendations.forEach(destination => {
+          const item = document.createElement("a");
+          item.classList.add("list-group-item", "list-group-item-action");
+          item.href = destination.link;
+          item.textContent = destination.name;
+          recommendationBar.appendChild(item);
+        });
+  
+        recommendationBar.style.display = "block";
+      } else {
+        recommendationBar.style.display = "none";
+      }
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

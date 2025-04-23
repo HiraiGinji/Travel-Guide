@@ -9,56 +9,73 @@
 </head>
 <body>
 
-    <header class="bg-white sticky-top shadow-sm">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light p-0">
-                <div class="container-fluid px-0">
-                    <a class="navbar-brand d-flex align-items-center" href="#">
-                        <img src="Images/logo1.jpeg" alt="Japan Travel Logo" class="img-fluid me-2">
-                        <span class="fw-bold fs-5">Kino's Travel Guide</span>
-                    </a>
+  <header class="bg-white sticky-top shadow-sm">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light p-0">
+            <div class="container-fluid px-0">
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img src="Images/logo1.jpeg" alt="Japan Travel Logo" class="img-fluid me-2">
+                    <span class="fw-bold fs-5">Kino's Travel Guide</span>
+                </a>
+                
+                <button class="navbar-toggler ms-auto border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link rounded-pill px-3 py-2 m-1 btn btn-outline-danger border-0 text-dark" href="index.html">
+                                Home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link rounded-pill px-3 py-2 m-1 btn btn-outline-danger border-0 text-dark" href="destination.html">
+                                Destinations
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle rounded-pill px-3 py-2 m-1 btn btn-outline-danger border-0 text-dark"
+                               href="#" id="navbarDropdownPlan" role="button" data-bs-toggle="dropdown"
+                               aria-expanded="false">
+                                Plan your Trips
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownPlan">
+                                <li><a class="dropdown-item" href="travelchecklist.html">Travel Checklist</a></li>
+                                <li><a class="dropdown-item" href="itinerary.html">Itinerary</a></li>
+                                <li><a class="dropdown-item" href="package.html">Package and Trip planning</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link rounded-pill px-3 py-2 m-1 btn btn-outline-danger border-0 text-dark" href="#">
+                                Citations
+                            </a>
+                        </li>
+                    </ul>
                     
-                    <button class="navbar-toggler ms-auto border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-        
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav mx-auto">
-                            <li class="nav-item">
-                                <a class="nav-link rounded-pill px-3 py-2 m-1 btn btn-outline-danger border-0 text-dark" href="index.html">
-                                    Home
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link rounded-pill px-3 py-2 m-1 btn btn-outline-danger border-0 text-dark" href="destination.html">
-                                    Destinations
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link rounded-pill px-3 py-2 m-1 btn btn-outline-danger border-0 text-dark" href="#">
-                                    Plan your Trips
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link rounded-pill px-3 py-2 m-1 btn btn-outline-danger border-0 text-dark" href="#">
-                                    Citations
-                                </a>
-                            </li>
-                        </ul>
-                        
-          <form class="d-flex ms-lg-3 my-2 my-lg-0">
-            <div class="input-group position-relative">
-              <input class="form-control border-end-0" id="search-input" type="search" placeholder="Search destinations..." oninput="filterDestinations()">
-              <button class="btn btn-outline-secondary border-start-0" type="submit"><i class="bi bi-search"></i></button>
-            </div>
-            <div id="recommendation-bar" class="list-group position-absolute w-100 mt-1" style="display: none;">
-            </div>
-          </form>
-                    </div>
-                </div>
-            </nav>
+      <form class="d-flex ms-lg-3 my-2 my-lg-0">
+        <div class="input-group position-relative">
+          <input class="form-control border-end-0" id="search-input" type="search" placeholder="Search destinations..." oninput="filterDestinations()">
+          <button class="btn btn-outline-secondary border-start-0" type="submit"><i class="bi bi-search"></i></button>
         </div>
-    </header>
+        <div id="recommendation-bar" class="list-group position-absolute w-100 mt-1" style="display: none;">
+        </div>
+      </form>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+
+    <div class="container mt-3">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">Japan</li>
+          <li class="breadcrumb-item active" aria-current="page">Arashiyama</li>
+        </ol>
+      </nav>
+    </div>
+
 
 <div class="container-fluid px-0">
   <div style="height: 80vh">

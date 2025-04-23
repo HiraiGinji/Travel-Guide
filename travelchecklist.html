@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Japan Travel Checklist</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
+  <header class="bg-white sticky-top shadow-sm">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light p-0">
+            <div class="container-fluid px-0">
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img src="Images/logo1.jpeg" alt="Japan Travel Logo" class="img-fluid me-2">
+                    <span class="fw-bold fs-5">Kino's Travel Guide</span>
+                </a>
+                
+                <button class="navbar-toggler ms-auto border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link rounded-pill px-3 py-2 m-1 btn btn-outline-danger border-0 text-dark" href="index.html">
+                                Home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link rounded-pill px-3 py-2 m-1 btn btn-outline-danger border-0 text-dark" href="destination.html">
+                                Destinations
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle rounded-pill px-3 py-2 m-1 btn btn-outline-danger border-0 text-dark"
+                               href="#" id="navbarDropdownPlan" role="button" data-bs-toggle="dropdown"
+                               aria-expanded="false">
+                                Plan your Trips
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownPlan">
+                                <li><a class="dropdown-item" href="travelchecklist.html">Travel Checklist</a></li>
+                                <li><a class="dropdown-item" href="itinerary.html">Itinerary</a></li>
+                                <li><a class="dropdown-item" href="package.html">Package and Trip planning</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link rounded-pill px-3 py-2 m-1 btn btn-outline-danger border-0 text-dark" href="#">
+                                Citations
+                            </a>
+                        </li>
+                    </ul>
+                    
+      <form class="d-flex ms-lg-3 my-2 my-lg-0">
+        <div class="input-group position-relative">
+          <input class="form-control border-end-0" id="search-input" type="search" placeholder="Search destinations..." oninput="filterDestinations()">
+          <button class="btn btn-outline-secondary border-start-0" type="submit"><i class="bi bi-search"></i></button>
+        </div>
+        <div id="recommendation-bar" class="list-group position-absolute w-100 mt-1" style="display: none;">
+        </div>
+      </form>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+
+    <div class="container mt-3">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">Japan</li>
+            <li class="breadcrumb-item active" aria-current="page">Travel Checklists</li>
+          </ol>
+        </nav>
+      </div>
+
+    <div class="text-center mb-3"> <br>
+      <h1 class="mb-4"> 📓 Kino's Travel Checklist</h1>
+      <p class="lead">Get ready for your dream trip to Japan with this all-in-one checklist and destination guide!</p>
+    </div>
+
+    <h2 class="text-primary mb-3">📦 Most Essential things to prepare while travelling</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
+      <div class="col">
+        <div class="card h-100">
+          <img src="Images/Passport.png" class="card-img-top" alt="Passport">
+          <div class="card-body">
+            <h5 class="card-title">Personal Documents</h5>
+            <ul>
+              <li>Passport</li>
+              <li>Visa (if needed)</li>
+              <li>Travel Insurance</li>
+              <li>ID / Driver’s License</li>
+              <li>Flight Tickets</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="Images/Health.png" class="card-img-top" alt="Doctor Lady">
+          <div class="card-body">
+            <h5 class="card-title">Health Essentials</h5>
+            <ul>
+              <li>Medications</li>
+              <li>First Aid Kit</li>
+              <li>Hand Sanitizer</li>
+              <li>Sunscreen</li>
+              <li>Face Masks</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="Images/Gear.png" class="card-img-top" alt="Kino pose">
+          <div class="card-body">
+            <h5 class="card-title">Tech & Gear</h5>
+            <ul>
+              <li>Phone & Power Bank</li>
+              <li>Travel Adapter</li>
+              <li>Camera</li>
+              <li>Offline Maps</li>
+              <li>Noise-canceling Headphones</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="text-warning mb-4">🧭 Destination-Specific Checklist</h2>
+    <div class="accordion" id="destinationChecklist">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="fujiHead">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#fujiList">
+              🗻 Mount Fuji Checklist
+            </button>
+          </h2>
+          <div id="fujiList" class="accordion-collapse collapse show" data-bs-parent="#destinationChecklist">
+            <div class="accordion-body">
+      
+              <div class="card mb-4">
+                <div class="card-body">
+                  <ul class="mb-0">
+                    <li>Hiking Shoes</li>
+                    <li>Layered Clothing</li>
+                    <li>Raincoat</li>
+                    <li>Camera with Zoom</li>
+                    <li>Snacks & Water</li>
+                  </ul>
+                </div>
+              </div>
+      
+              <div class="row row-cols-1 row-cols-md-3 g-3">
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="Images/Hiking Gear.png" class="card-img-top" alt="Gear">
+                    <div class="card-body">
+                      <h5 class="card-title">Hiking Gear</h5>
+                      <p class="card-text">Pack sturdy shoes and weather-resistant clothes. Climbing up a mountain isnt easy! Better be prepared than be sorry later!</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="Images/Weather Prep.png" class="card-img-top" alt="Weather Prep">
+                    <div class="card-body">
+                      <h5 class="card-title">Weather Prep</h5>
+                      <p class="card-text">Layer up and bring a raincoat for unexpected weather. It gets very cold there too! So make sure you're all prepared for the big mean weather!</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="Images/Essentials.png" class="card-img-top" alt="Essentials">
+                    <div class="card-body">
+                      <h5 class="card-title">Essentials</h5>
+                      <p class="card-text">Don’t forget your zoom lens, snacks, and water! You have no idea how long you'll be when you're up there! Pack at least 2 days worth of food</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="osakaHead">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#osakaList">
+            🏯 Osaka Castle Checklist
+          </button>
+        </h2>
+        <div id="osakaList" class="accordion-collapse collapse" data-bs-parent="#destinationChecklist">
+          <div class="accordion-body">
+      
+            <div class="card mb-4">
+              <div class="card-body">
+                <ul class="mb-0">
+                  <li>Comfortable Walking Shoes</li>
+                  <li>Historical Guidebook</li>
+                  <li>Camera or Smartphone</li>
+                  <li>Cash for Souvenirs</li>
+                  <li>Sunscreen & Hat</li>
+                </ul>
+              </div>
+            </div>
+      
+            <div class="row row-cols-1 row-cols-md-3 g-3">
+              <div class="col">
+                <div class="card h-100">
+                  <img src="Images/Sunscreen.png" class="card-img-top" alt="Sunscreen">
+                  <div class="card-body">
+                    <h5 class="card-title">Comfort Protection!</h5>
+                    <p class="card-text">Gear up with comfy shoes and sun protection. You'll have more fun when at least you feel like it. Never let inconveniences ruin the fun!</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100">
+                  <img src="Images/Camera.png" class="card-img-top" alt="Camera">
+                  <div class="card-body">
+                    <h5 class="card-title">Exploration Gear</h5>
+                    <p class="card-text">Capture memories and explore with confidence. A memory may fade over time, but the pictures will be there to help remember</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100">
+                  <img src="Images/Cash.png" class="card-img-top" alt="Cash">
+                  <div class="card-body">
+                    <h5 class="card-title">Extras</h5>
+                    <p class="card-text">Bring extra cash for souvenirs and treats.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="shinjukuHead">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#shinjukuList">
+            🌸 Shinjuku Gyoen Checklist
+          </button>
+        </h2>
+        <div id="shinjukuList" class="accordion-collapse collapse" data-bs-parent="#destinationChecklist">
+          <div class="accordion-body">
+      
+            <div class="card mb-4">
+              <div class="card-body">
+                <ul class="mb-0">
+                  <li>Picnic Blanket</li>
+                  <li>Snacks and Drinks</li>
+                  <li>Camera for Flower Photography</li>
+                  <li>Book or Journal</li>
+                  <li>Reusable Bag for Trash</li>
+                </ul>
+              </div>
+            </div>
+      
+            <div class="row row-cols-1 row-cols-md-3 g-3">
+              <div class="col">
+                <div class="card h-100">
+                  <img src="Images/Picnic.png" class="card-img-top" alt="Picnic Time">
+                  <div class="card-body">
+                    <h5 class="card-title">Picnic Essentials</h5>
+                    <p class="card-text">Lay out your blanket and enjoy snacks under the cherry blossoms.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100">
+                  <img src="Images/Camera2.png" class="card-img-top" alt="Photography">
+                  <div class="card-body">
+                    <h5 class="card-title">Photo Moments</h5>
+                    <p class="card-text">Capture the bloom with your camera or phone.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100">
+                  <img src="Images/Relax.png" class="card-img-top" alt="Relaxation">
+                  <div class="card-body">
+                    <h5 class="card-title">Relaxation Kit</h5>
+                    <p class="card-text">Read, write, and unwind with your book or journal.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="bambooHead">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bambooList">
+                🎍 Arashiyama Bamboo Grove Checklist
+              </button>
+            </h2>
+            <div id="bambooList" class="accordion-collapse collapse" data-bs-parent="#destinationChecklist">
+              <div class="accordion-body">
+          
+                <div class="card mb-4">
+                  <div class="card-body">
+                    <ul class="mb-0">
+                      <li>Comfortable Footwear</li>
+                      <li>Insect Repellent</li>
+                      <li>Portable Fan (for Summer)</li>
+                      <li>Tripod or Gimbal for Smooth Photos</li>
+                      <li>Reusable Water Bottle</li>
+                    </ul>
+                  </div>
+                </div>
+          
+                <div class="row row-cols-1 row-cols-md-3 g-3">
+                  <div class="col">
+                    <div class="card h-100">
+                      <img src="Images/Shoes.png" class="card-img-top" alt="Comfortable Footwear">
+                      <div class="card-body">
+                        <h5 class="card-title">Stay Comfortable</h5>
+                        <p class="card-text">Wear good walking shoes for peaceful strolls through the bamboo path.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100">
+                      <img src="Images/Repellant.png" class="card-img-top" alt="Woman holding Insect Repellant">
+                      <div class="card-body">
+                        <h5 class="card-title">Summer Ready</h5>
+                        <p class="card-text">Use insect repellent and carry a portable fan for summer heat.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100">
+                      <img src="Images/Camera3.png" class="card-img-top" alt="Photography Gear">
+                      <div class="card-body">
+                        <h5 class="card-title">Capture the Calm</h5>
+                        <p class="card-text">Bring a tripod or gimbal for serene, stable shots of the bamboo grove.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="monkeyParkHead">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#monkeyParkList">
+                🐒 Arashiyama Monkey Park Checklist
+                </button>
+            </h2>
+            <div id="monkeyParkList" class="accordion-collapse collapse" data-bs-parent="#destinationChecklist">
+                <div class="accordion-body">
+            
+                <div class="card mb-4">
+                    <div class="card-body">
+                    <ul class="mb-0">
+                        <li>Comfortable Hiking Shoes</li>
+                        <li>Binoculars for Bird Watching</li>
+                        <li>Sun Protection (Hat & Sunscreen)</li>
+                        <li>Camera for Wildlife Photography</li>
+                        <li>Water and Snacks</li>
+                    </ul>
+                    </div>
+                </div>
+            
+                <div class="row row-cols-1 row-cols-md-3 g-3">
+                    <div class="col">
+                    <div class="card h-100">
+                        <img src="Images/Shoes.png" class="card-img-top" alt="Hiking Shoes">
+                        <div class="card-body">
+                        <h5 class="card-title">Hiking Shoes</h5>
+                        <p class="card-text">Prepare for the uphill trek with comfortable footwear.</p>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col">
+                    <div class="card h-100">
+                        <img src="Images/Monkey.png" class="card-img-top" alt="Wildlife Observation">
+                        <div class="card-body">
+                        <h5 class="card-title">Wildlife Observation</h5>
+                        <p class="card-text">Have fun with nature and enjoy the scenic animal life, especially monkeys.</p>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col">
+                    <div class="card h-100">
+                        <img src="Images/monkeycam.png" class="card-img-top" alt="Photography Gear">
+                        <div class="card-body">
+                        <h5 class="card-title">Capture the Moment</h5>
+                        <p class="card-text">Take stunning shots of the monkeys and the beautiful views.</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+              
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="matsumotoHead">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#matsumotoList">
+                🏰 Matsumoto Castle Checklist
+              </button>
+            </h2>
+            <div id="matsumotoList" class="accordion-collapse collapse" data-bs-parent="#destinationChecklist">
+              <div class="accordion-body">
+          
+                <div class="card mb-4">
+                  <div class="card-body">
+                    <ul class="mb-0">
+                      <li>Comfortable Walking Shoes</li>
+                      <li>Castle Tour Ticket</li>
+                      <li>Camera for Photos</li>
+                      <li>Portable Battery Pack</li>
+                      <li>Water and Snacks</li>
+                    </ul>
+                  </div>
+                </div>
+          
+                <div class="row row-cols-1 row-cols-md-3 g-3">
+                  <div class="col">
+                    <div class="card h-100">
+                      <img src="Images/Shoes2.png" class="card-img-top" alt="Walking Shoes">
+                      <div class="card-body">
+                        <h5 class="card-title">Comfortable Shoes</h5>
+                        <p class="card-text">Ensure you're comfortable for the walk around the castle grounds.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100">
+                      <img src="Images/Ticket.png" class="card-img-top" alt="Ticket">
+                      <div class="card-body">
+                        <h5 class="card-title">Tour Ticket</h5>
+                        <p class="card-text">Make sure you have your entry ticket to explore the castle.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100">
+                      <img src="Images/Camera4.png" class="card-img-top" alt="Photography Gear">
+                      <div class="card-body">
+                        <h5 class="card-title">Capture the Views</h5>
+                        <p class="card-text">Don't forget your camera to take stunning photos of the iconic Matsumoto Castle.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="imperialPalaceHead">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#imperialPalaceList">
+                🏯 Tokyo Imperial Palace Checklist
+              </button>
+            </h2>
+            <div id="imperialPalaceList" class="accordion-collapse collapse" data-bs-parent="#destinationChecklist">
+              <div class="accordion-body">
+          
+                <div class="card mb-4">
+                  <div class="card-body">
+                    <ul class="mb-0">
+                      <li>Government-Issued ID (for guided tours)</li>
+                      <li>Walking Shoes</li>
+                      <li>Respectful Attire</li>
+                      <li>Guidebook or Audio Tour App</li>
+                      <li>Water Bottle</li>
+                    </ul>
+                  </div>
+                </div>
+          
+                <div class="row row-cols-1 row-cols-md-3 g-3">
+                  <div class="col">
+                    <div class="card h-100">
+                      <img src="Images/ID.png" class="card-img-top" alt="ID Card">
+                      <div class="card-body">
+                        <h5 class="card-title">Tour Requirements</h5>
+                        <p class="card-text">Bring valid ID for access to the palace grounds on guided tours.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100">
+                      <img src="Images/Walking.png" class="card-img-top" alt="Walking Group">
+                      <div class="card-body">
+                        <h5 class="card-title">Comfortable Footwear</h5>
+                        <p class="card-text">You'll be doing a lot of walking, so wear shoes that can handle the gardens and grounds.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100">
+                      <img src="Images/Tour.png" class="card-img-top" alt="Tour Guide App">
+                      <div class="card-body">
+                        <h5 class="card-title">Guidebook or App</h5>
+                        <p class="card-text">Use a tour guide app or booklet to enrich your experience with historical insights.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="kuromonHead">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#kuromonList">
+                🍣 Kuromon Ichiba Market Checklist
+              </button>
+            </h2>
+            <div id="kuromonList" class="accordion-collapse collapse" data-bs-parent="#destinationChecklist">
+            <div class="accordion-body">
+                <div class="card mb-4">
+                <div class="card-body">
+                    <ul class="mb-0">
+                      <li>Cash (many vendors are cash-only)</li>
+                      <li>Reusable Bag for Purchases</li>
+                      <li>Wet Wipes or Tissues</li>
+                      <li>Translation App</li>
+                      <li>Empty Stomach!</li>
+                    </ul>
+                </div>
+            </div>
+          
+            <div class="row row-cols-1 row-cols-md-3 g-3">
+                  <div class="col">
+                    <div class="card h-100">
+                      <img src="Images/Cash.png" class="card-img-top" alt="Cash">
+                      <div class="card-body">
+                        <h5 class="card-title">Carry Cash</h5>
+                        <p class="card-text">Many street vendors and stalls at Kuromon Market only accept cash payments.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100">
+                      <img src="Images/SHOPBAG.png" class="card-img-top" alt="Shopping Bag">
+                      <div class="card-body">
+                        <h5 class="card-title">Bring a Bag</h5>
+                        <p class="card-text">Carry a reusable bag for snacks, souvenirs, and street food delights.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100">
+                      <img src="Images/TRANSLATOR.png" class="card-img-top" alt="Translation App">
+                      <div class="card-body">
+                        <h5 class="card-title">Translation App</h5>
+                        <p class="card-text">Helpful for reading menus or asking for recommendations from local vendors.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+    </div>
+  </div>
+  </div>
+
+  <script>
+    const destinations = [
+      { name: "Arashiyama Monkey Park", link: "arashiyama.html" },
+      { name: "Mount Fuji", link: "mountfuji.html" },
+      { name: "Osaka Castle", link: "osakacastle.html" },
+      { name: "Shinjuku Gyoen National Garden", link: "shinjukugyoen.html" },
+      { name: "Matsumoto Castle", link: "matsumoto.html" },
+      { name: "Arashiyama Bamboo Grove", link: "bamboogrove.html" },
+      { name: "Kuromon Ichiba Market", link: "kuromon.html" },
+      { name: "Tokyo Imperial Palace", link: "imperial.html" }
+    ];
+  
+    function filterDestinations() {
+      const searchInput = document.getElementById("search-input").value.toLowerCase();
+      const recommendations = destinations.filter(destination =>
+        destination.name.toLowerCase().includes(searchInput)
+      );
+  
+      const recommendationBar = document.getElementById("recommendation-bar");
+      recommendationBar.innerHTML = "";
+  
+      if (recommendations.length > 0 && searchInput !== "") {
+        recommendations.forEach(destination => {
+          const item = document.createElement("a");
+          item.classList.add("list-group-item", "list-group-item-action");
+          item.href = destination.link;
+          item.textContent = destination.name;
+          recommendationBar.appendChild(item);
+        });
+  
+        recommendationBar.style.display = "block";
+      } else {
+        recommendationBar.style.display = "none";
+      }
+    }
+  </script>
+
+</body>
+
+</html>
