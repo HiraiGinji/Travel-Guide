@@ -5,127 +5,105 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel Japan</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
 </head>
 <body>
-    <header class="bg-white sticky-top">
-        <div class="container py-2">
-            <div class="row align-items-center">
-                <div class="col-12 d-flex justify-content-end align-items-center">
-                    <div class="d-none d-lg-flex gap-3 me-4">
-                        <a href="#" class="text-secondary text-decoration-none">Media</a>
-                        <a href="#" class="text-secondary text-decoration-none">Travel Trade</a>
-                        <a href="#" class="text-secondary text-decoration-none">Meetings & Events</a>
-                        <a href="#" clasAs="text-secondary text-decoration-none">Netherlands</a>
-                    </div>
-                    <a href="#" class="text-secondary text-decoration-none me-3">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
-                            <path d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.47-.417 3.845C.76 8.144 1.292 9.435 2.21 10.513l6.29 6.29a1 1 0 0 0 1.414 0l6.29-6.29c.918-1.078 1.45-2.37.98-3.645-.224-1.376-.106-2.823.417-3.845C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 16s-1.324-1.248-1.324-4.436c0-3.188 2.925-5.568 4.1-5.568.3 0 .6.068.866.194 1.537 1.022 2.123 3.976 2.123 3.976 0 3.188-1.324 4.436-1.324 4.436H8z"/>
-                        </svg>
-                    </a>
-                    <div class="dropdown me-3">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Select Language
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">English</a></li>
-                            <li><a class="dropdown-item" href="#">Japanese</a></li>
-                            <li><a class="dropdown-item" href="#">Spanish</a></li>
-                        </ul>
-                    </div>
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-secondary" type="submit">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.098zM8 3.207a4.8 4.8 0 1 1 0 9.614 4.8 4.8 0 0 1 0-9.614z"/>
-                            </svg>
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </header>
 
-    <nav class="bg-white border-bottom">
-        <div class="container py-2">
-            <nav class="navbar navbar-expand-lg">
-                <div class="container-fluid">
-                    <div class="d-flex align-items-center">
-                        <img src="https://www.japan.travel/assets/images/logo/logo.svg" alt="Japan Travel Logo" class="img-fluid me-2" style="max-height: 40px;">
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                    </div>
+    <header class="bg-white sticky-top shadow-sm">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light p-0">
+                <div class="container-fluid px-0">
+                    <!-- Logo on left -->
+                    <a class="navbar-brand" href="#">
+                        <img src="https://www.japan.travel/assets/images/logo/logo.svg" alt="Japan Travel Logo" class="img-fluid" style="max-height: 40px;">
+                    </a>
+                    
+                    <!-- Hamburger menu moved to right -->
+                    <button class="navbar-toggler ms-auto border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+    
                     <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
+                        <ul class="navbar-nav me-auto">
                             <li class="nav-item">
-                                <a class="nav-link text-secondary" aria-current="page" href="#">Destinations</a>
+                                <a class="nav-link text-secondary px-3 py-3 py-lg-2" href="#">Destinations</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-secondary" href="#">Things to Do</a>
+                                <a class="nav-link text-secondary px-3 py-3 py-lg-2" href="#">Things to Do</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-secondary" href="#">Plan Your Trip</a>
+                                <a class="nav-link text-secondary px-3 py-3 py-lg-2" href="#">Plan Your Trip</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-secondary" href="#">Inspiration</a>
+                                <a class="nav-link text-secondary px-3 py-3 py-lg-2" href="#">Inspiration</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-secondary" href="#">Contact Us</a>
+                                <a class="nav-link text-secondary px-3 py-3 py-lg-2" href="#">Contact Us</a>
                             </li>
                         </ul>
+                        
+                        <form class="d-flex ms-lg-3 my-2 my-lg-0">
+                            <div class="input-group">
+                                <input class="form-control border-end-0" type="search" placeholder="Search..." aria-label="Search">
+                                <button class="btn btn-outline-secondary border-start-0" type="submit">
+                                    <i class="bi bi-search"></i>
+                                </button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </nav>
         </div>
-    </nav>
-
-    <main>
-        <div class="container-fluid px-0">
-            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="Images/testimg.jpg" class="d-block w-100" alt="Japan Image 1">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h1 class="text-white fw-bold" style="font-size: 2.5rem;">From Traditional Techniques To Modern Innovation, Japan's Fashion Brands Have A Lot to Offer</h1>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="Images/testimage1.jpg" class="d-block w-100" alt="Japan Image 2">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h1 class="text-white fw-bold" style="font-size: 2.5rem;">Discover the Beauty of Japan</h1>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="Image" class="d-block w-100" alt="Japan Image 3">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h1 class="text-white fw-bold" style="font-size: 2.5rem;">Explore the Wonders of Japan</h1>
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+    </header>
+    
+    <div class="container-fluid px-0">
+        <div style="height: 75vh">
+          <div id="carouselExampleIndicators" class="carousel slide h-100" data-bs-ride="carousel">
+            
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
+      
+            <div class="carousel-inner h-100">
+              <div class="carousel-item active h-100">
+                <img src="Images/testimg.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Japan Image 1">
+                <div class="carousel-caption d-flex flex-column justify-content-center h-100 pb-3 pb-md-5">
+                  <h1 class="text-white fw-bold display-5 display-md-3 display-lg-1">Traditional Meets Modern</h1>
+                  <p class="d-none d-md-block fs-5 fs-lg-4">Experience the blend of ancient traditions and cutting-edge technology</p>
+                </div>
+              </div>
+              <div class="carousel-item h-100">
+                <img src="Images/testimage1.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Japan Image 2">
+                <div class="carousel-caption d-flex flex-column justify-content-center h-100 pb-3 pb-md-5">
+                  <h1 class="text-white fw-bold display-5 display-md-3 display-lg-1">Discover the Beauty</h1>
+                  <p class="d-none d-md-block fs-5 fs-lg-4">From cherry blossoms to majestic mountains</p>
+                </div>
+              </div>
+              <div class="carousel-item h-100">
+                <img src="Images/testimage2.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Japan Image 3">
+                <div class="carousel-caption d-flex flex-column justify-content-center h-100 pb-3 pb-md-5">
+                  <h1 class="text-white fw-bold display-5 display-md-3 display-lg-1">Explore Japan</h1>
+                  <p class="d-none d-md-block fs-5 fs-lg-4">Your unforgettable journey starts here</p>
+                </div>
+              </div>
+            </div>
+      
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
         </div>
-    </main>
+      </div>
+      
+      
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 </body>
