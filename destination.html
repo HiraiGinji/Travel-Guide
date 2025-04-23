@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Japan Destinations</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body>
+
+<header class="bg-white sticky-top shadow-sm">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light p-0">
+      <div class="container-fluid px-0">
+        <a class="navbar-brand" href="#">
+          <img src="https://www.japan.travel/assets/images/logo/logo.svg" alt="Japan Travel Logo" class="img-fluid">
+        </a>
+        <button class="navbar-toggler ms-auto border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item"><a class="nav-link rounded-pill px-3 py-2 m-1 btn btn-outline-danger border-0 text-dark" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link rounded-pill px-3 py-2 m-1 btn btn-outline-danger border-0 text-dark" href="#">Destinations</a></li>
+            <li class="nav-item"><a class="nav-link rounded-pill px-3 py-2 m-1 btn btn-outline-danger border-0 text-dark" href="#">Plan your Trips</a></li>
+            <li class="nav-item"><a class="nav-link rounded-pill px-3 py-2 m-1 btn btn-outline-danger border-0 text-dark" href="#">Citations</a></li>
+          </ul>
+          <form class="d-flex ms-lg-3 my-2 my-lg-0">
+            <div class="input-group">
+              <input class="form-control border-end-0" type="search" placeholder="Search...">
+              <button class="btn btn-outline-secondary border-start-0" type="submit"><i class="bi bi-search"></i></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<div class="container-fluid py-5">
+  <div class="row">
+    <div class="col-md-7">
+      <div id="destinationsCarousel" class="carousel slide h-100" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#destinationsCarousel" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#destinationsCarousel" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#destinationsCarousel" data-bs-slide-to="2"></button>
+          <button type="button" data-bs-target="#destinationsCarousel" data-bs-slide-to="3"></button>
+          <button type="button" data-bs-target="#destinationsCarousel" data-bs-slide-to="4"></button>
+          <button type="button" data-bs-target="#destinationsCarousel" data-bs-slide-to="5"></button>
+          <button type="button" data-bs-target="#destinationsCarousel" data-bs-slide-to="6"></button>
+          <button type="button" data-bs-target="#destinationsCarousel" data-bs-slide-to="7"></button>
+        </div>
+
+        <div class="carousel-inner h-100">
+            <div class="carousel-item active h-100 position-relative" data-map-url="https://maps.google.com/maps?q=35.3606,138.7274&z=14&output=embed">
+              <a href="#">
+                <img src="Images/Mount Fuji.png" class="d-block w-100 h-100 object-fit-cover" alt="Mount Fuji">
+                <div class="position-absolute top-0 start-0 w-100 h-100 bg-black opacity-50"></div>
+                <div class="carousel-caption d-flex flex-column justify-content-end h-100 pb-3 pb-md-5">
+                  <h5 class="text-white fw-bold display-6">Mount Fuji</h5>
+                  <p class="fs-5 text-white">Japan's tallest mountain and iconic symbol</p>
+                </div>
+              </a>
+            </div>
+          
+            <div class="carousel-item h-100 position-relative" data-map-url="https://maps.google.com/maps?q=34.6873,135.5259&z=14&output=embed">
+              <a href="index.html">
+                <img src="Images/Osaka Castle.png" class="d-block w-100 h-100 object-fit-cover" alt="Osaka Castle">
+                <div class="position-absolute top-0 start-0 w-100 h-100 bg-black opacity-50"></div>
+                <div class="carousel-caption d-flex flex-column justify-content-end h-100 pb-3 pb-md-5">
+                  <h5 class="text-white fw-bold display-6">Osaka Castle</h5>
+                  <p class="fs-5 text-white">Historic castle in the heart of Osaka</p>
+                </div>
+              </a>
+            </div>
+          
+            <div class="carousel-item h-100 position-relative" data-map-url="https://maps.google.com/maps?q=35.6852,139.7100&z=14&output=embed">
+              <a href="#">
+                <img src="Images/Shinjuku Gyoen National Garden.png" class="d-block w-100 h-100 object-fit-cover" alt="Shinjuku Gyoen">
+                <div class="position-absolute top-0 start-0 w-100 h-100 bg-black opacity-50"></div>
+                <div class="carousel-caption d-flex flex-column justify-content-end h-100 pb-3 pb-md-5">
+                  <h5 class="text-white fw-bold display-6">Shinjuku Gyoen National Garden</h5>
+                  <p class="fs-5 text-white">Beautiful park in central Tokyo</p>
+                </div>
+              </a>
+            </div>
+          
+            <div class="carousel-item h-100 position-relative" data-map-url="https://maps.google.com/maps?q=36.2381,137.9706&z=14&output=embed">
+              <a href="#">
+                <img src="Images/Matsumoto Castle.png" class="d-block w-100 h-100 object-fit-cover" alt="Matsumoto Castle">
+                <div class="position-absolute top-0 start-0 w-100 h-100 bg-black opacity-50"></div>
+                <div class="carousel-caption d-flex flex-column justify-content-end h-100 pb-3 pb-md-5">
+                  <h5 class="text-white fw-bold display-6">Matsumoto Castle</h5>
+                  <p class="fs-5 text-white">Beautiful "Crow Castle" with black exterior</p>
+                </div>
+              </a>
+            </div>
+          
+            <div class="carousel-item h-100 position-relative" data-map-url="https://maps.google.com/maps?q=35.0155,135.6726&z=14&output=embed">
+              <a href="#">
+                <img src="Images/Arashiyama Monkey Park.png" class="d-block w-100 h-100 object-fit-cover" alt="Monkey Park">
+                <div class="position-absolute top-0 start-0 w-100 h-100 bg-black opacity-50"></div>
+                <div class="carousel-caption d-flex flex-column justify-content-end h-100 pb-3 pb-md-5">
+                  <h5 class="text-white fw-bold display-6">Arashiyama Monkey Park</h5>
+                  <p class="fs-5 text-white">See wild monkeys in their natural habitat</p>
+                </div>
+              </a>
+            </div>
+          
+            <div class="carousel-item h-100 position-relative" data-map-url="https://maps.google.com/maps?q=34.6655,135.5064&z=14&output=embed">
+              <a href="#">
+                <img src="Images/Kuromon Ichiba Market.png" class="d-block w-100 h-100 object-fit-cover" alt="Kuromon Market">
+                <div class="position-absolute top-0 start-0 w-100 h-100 bg-black opacity-50"></div>
+                <div class="carousel-caption d-flex flex-column justify-content-end h-100 pb-3 pb-md-5">
+                  <h5 class="text-white fw-bold display-6">Kuromon Ichiba Market</h5>
+                  <p class="fs-5 text-white">Osaka's famous food market</p>
+                </div>
+              </a>
+            </div>
+          
+            <div class="carousel-item h-100 position-relative" data-map-url="https://maps.google.com/maps?q=35.6852,139.7528&z=14&output=embed">
+              <a href="#">
+                <img src="Images/Tokyo Imperial Palace.png" class="d-block w-100 h-100 object-fit-cover" alt="Imperial Palace">
+                <div class="position-absolute top-0 start-0 w-100 h-100 bg-black opacity-50"></div>
+                <div class="carousel-caption d-flex flex-column justify-content-end h-100 pb-3 pb-md-5">
+                  <h5 class="text-white fw-bold display-6">Tokyo Imperial Palace</h5>
+                  <p class="fs-5 text-white">Official residence of the Emperor of Japan</p>
+                </div>
+              </a>
+            </div>
+          
+            <div class="carousel-item h-100 position-relative" data-map-url="https://maps.google.com/maps?q=35.0094,135.6672&z=14&output=embed">
+              <a href="#">
+                <img src="Images/Arashiyama Bamboo Grove.png" class="d-block w-100 h-100 object-fit-cover" alt="Arashiyama Bamboo Grove">
+                <div class="position-absolute top-0 start-0 w-100 h-100 bg-black opacity-50"></div>
+                <div class="carousel-caption d-flex flex-column justify-content-end h-100 pb-3 pb-md-5">
+                  <h5 class="text-white fw-bold display-6">Arashiyama Bamboo Grove</h5>
+                  <p class="fs-5 text-white">Stunning bamboo forest in Kyoto</p>
+                </div>
+              </a>
+            </div>
+          </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#destinationsCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#destinationsCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="col-md-5">
+      <div class="card h-100">
+        <div class="card-body p-0">
+          <iframe id="mapIframe"
+                  src="https://maps.google.com/maps?q=35.3606,138.7274&z=14&output=embed"
+                  width="100%"
+                  height="500"
+                  style="border:0;"
+                  allowfullscreen=""
+                  loading="lazy"
+                  class="rounded-4">
+          </iframe>
+          <div class="p-3">
+            <h5 class="card-title">Japan Destinations Map</h5>
+            <p class="card-text">Select a destination to update the map automatically</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  const mapIframe = document.getElementById("mapIframe");
+  const carousel = document.getElementById("destinationsCarousel");
+
+  carousel.addEventListener("slid.bs.carousel", function () {
+    const activeItem = carousel.querySelector(".carousel-item.active");
+    const mapUrl = activeItem.getAttribute("data-map-url");
+    if (mapUrl) {
+      mapIframe.src = mapUrl;
+    }
+  });
+</script>
+
+</body>
+</html>
